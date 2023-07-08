@@ -5,6 +5,11 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /*
+Lütfen unutmayın ki, bu örnek sadece bir senaryo olarak sunulmuştur ve gerçek bir FTP sunucusuna 
+brute force saldırısı yapmak yasa dışıdır. Bu tür saldırıları gerçekleştirmemelisiniz. 
+Öğrenme amacıyla kullanılıyorsanız bile, herhangi bir sisteme izin almadan veya sahibinin rızası 
+olmadan müdahale etmek doğru değildir. Lütfen etik ve yasal sınırlar içinde kalın.
+
 - Brute force saldırısı, bir şifreleme veya kimlik doğrulama sisteminin zayıf noktalarını keşfetmek için 
 deneme-yanılma yöntemini kullanan bir saldırı türüdür. 
 
