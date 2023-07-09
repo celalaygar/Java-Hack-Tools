@@ -5,25 +5,28 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /*
-Lütfen unutmayın ki, bu örnek sadece bir senaryo olarak sunulmuştur ve gerçek bir FTP sunucusuna 
+Lütfen unutmayın, bu örnek sadece bir senaryo olarak sunulmuştur ve gerçek bir FTP sunucusuna 
 brute force saldırısı yapmak yasa dışıdır. Bu tür saldırıları gerçekleştirmemelisiniz. 
 Öğrenme amacıyla kullanılıyorsanız bile, herhangi bir sisteme izin almadan veya sahibinin rızası 
 olmadan müdahale etmek doğru değildir. Lütfen etik ve yasal sınırlar içinde kalın.
 
-- Brute force saldırısı, bir şifreleme veya kimlik doğrulama sisteminin zayıf noktalarını keşfetmek için 
-deneme-yanılma yöntemini kullanan bir saldırı türüdür. 
+- Brute force saldırısı, bir şifreleme veya kimlik doğrulama sisteminin zayıf noktalarını 
+keşfetmek için deneme-yanılma yöntemini kullanan bir saldırı türüdür. 
 
-- Ancak, bu tür saldırılar yasa dışıdır ve başka kişilerin veya sistemlerin izni olmadan gerçekleştirilmemelidir. 
+- Ancak, bu tür saldırılar yasa dışıdır ve başka kişilerin veya sistemlerin izni olmadan 
+gerçekleştirilmemelidir. 
 
 - Apache Commons Net kütüphanesini kullanarak FTP sunucusuna oturum açmak için 
 brute force yöntemini deneyen basit bir Java örneğidir. 
 
-- Sunucuya oturum açmak için belirli bir şifre listesini deneyerek başarılı bir şifreyi bulmayı hedefler. 
+- Sunucuya oturum açmak için belirli bir şifre listesini deneyerek başarılı bir şifreyi 
+bulmayı hedefler. 
 
 - passwords.txt adlı bir metin dosyasında şifrelerin bulunduğu varsayılmalıdır.
 
-- Alttaki kod, passwords.txt adlı bir dosyadan şifreleri okur ve her bir şifreyle FTP sunucusuna oturum açmaya çalışır. 
-Eğer başarılı bir oturum açma gerçekleşirse, kullanıcı adını ve şifreyi ekrana yazdırır ve döngüden çıkar.
+- Alttaki kod, passwords.txt adlı bir dosyadan şifreleri okur ve her bir şifreyle 
+FTP sunucusuna oturum açmaya çalışır. Eğer başarılı bir oturum açma gerçekleşirse, 
+kullanıcı adını ve şifreyi ekrana yazdırır ve döngüden çıkar.
 
 */
 public class FTPBruteForceExample {
